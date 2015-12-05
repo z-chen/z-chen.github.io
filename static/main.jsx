@@ -65,7 +65,7 @@ const Citation = React.createClass({
 const App = React.createClass({
   render: function() {
     var sidebar = <div className="sidebar">
-      <img src="assets/profile.jpg" style={{width:"160px"}}/>
+      <img src="assets/profile.jpg" style={{width:"160px",borderRadius:"160px",paddingBottom:"5px"}}/>
       <p className="name">Zhenghao Chen</p>
       <p>
         <a href="https://www.linkedin.com/in/zhenghao-chen-44865036">LinkedIn</a> | <a href="assets/ZhenghaoChen_resume.pdf">Resume</a>
