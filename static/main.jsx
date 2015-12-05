@@ -81,7 +81,7 @@ const App = React.createClass({
       </div>
 
     var research_sidebar = <div className="sidebar">
-      Peer Reviewed Publications
+      Research Publications
       <p style={{paddingTop: "10px"}}>
         <a href="https://scholar.google.com/citations?user=8vZCyCcAAAAJ&hl=en&oi=ao">Google Scholar</a>
       </p>
