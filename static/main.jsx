@@ -214,7 +214,7 @@ const App = React.createClass({
       </p>
 
       <p>
-        I also like sharing and learning new technologies;; I have a particular interest in understanding how to 
+        I also like sharing and learning new technologies; I have a particular interest in understanding how to 
         teach better through data.
         Before starting at Stanford, Pang Wei and I planned and taught
         a collection of 14 full-day workshops introducting concepts in CS, AI, cryptography and computer networking to
