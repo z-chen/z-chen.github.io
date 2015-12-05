@@ -1,0 +1,141 @@
+
+/* General */
+
+body {
+    padding-top: 80px;
+    font-family: 'Muli';
+}
+
+.container {
+    width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.42857143;
+}
+
+a {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease-in-out,border 200ms ease-in-out;
+  transition: color 200ms ease-in-out,border 200ms ease-in-out,font-weight 200ms ease-in-out;
+  border-bottom: 2px dotted #C41E3A;
+  color: inherit;
+  font-weight: bold;
+}
+
+a:visited{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover{
+  color: #C41E3A;
+  border-bottom: 1px dotted transparent;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+
+/* Sections */
+
+.section {
+    position: relative;
+    padding: 40px 0px;
+    min-height: 100%;
+    height: auto !important;
+    overflow-y: hidden;
+}
+
+.left {
+    position: relative;
+    width: 20%;
+    padding-right: 5%;
+    float: left;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.right {
+    width: 70%;
+    padding-left: 5%;
+    float: left;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: justify;
+    min-height: 300px;
+}
+
+.right p{
+    padding-bottom: 10px;
+}
+
+/* sidebar */
+
+.sticky {
+    position: static;
+    top: 30px;
+}
+
+.sticky:before,
+.sticky:after {
+    content: '';
+    display: table;
+}
+
+.sidebar .name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar a {
+    font-size: 12px;
+}
+
+
+/* Publications */
+
+.publication {
+    padding-bottom: 12px;
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
+    border-bottom: 1px dotted #555;
+    padding-top: 12px;
+}
+
+.publication .download_link {
+    font-size: 14px;
+}
+
+.publication .title {
+    width: 95%;
+    float: left;
+    font-size: 18px;
+    padding-right: 10%;
+    font-weight: bold;
+}
+
+.publication .author_list {
+    padding-top: 10px;
+    min-height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.publication .author {
+    font-size: 14px;
+    float: left;
+    margin-right: 5px;
+}
+
+.publication .author.me{
+    font-weight: bold;
+    /*border-bottom: 1px dotted #333;
+    line-height: 1.5;*/
+}
+
+.publication .citation {
+    font-size: 14px;
+    float: left;
+}
