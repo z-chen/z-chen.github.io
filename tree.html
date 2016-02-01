@@ -70,7 +70,9 @@ var treeLayout = d3.layout.tree()
 
 var svg = d3.select(".chart").append("svg")
     .attr("width", width)
-    .attr("height", height); 
+    .attr("height", height);
+
+var legendAxis;
 
 var tree = 
 {'cellType': 'H7 hESC',
@@ -121,13 +123,16 @@ var colorScale = d3.scale.linear()
 
 var buildLegend = function(colorScale, parentElem, width, height) {
     var ymax = Math.max(...colorScale.domain());
+    var ymin = Math.min(...colorScale.domain());
+
     var legend_data = [];
     for (var i = 0; i < height; i++) {
-      legend_data.push(i / height * ymax); 
+      legend_data.push( (i / height * (ymax - ymin)) + ymin); 
+      console.log(legend_data);
     }
 
     var legend_scale = d3.scale.linear()
-      .domain([ymax, 0])
+      .domain([ymax, ymin])
       .range([0, height]);
 
     var legend_axis = d3.svg.axis()
@@ -148,7 +153,7 @@ var buildLegend = function(colorScale, parentElem, width, height) {
       .attr("x", -width / 2)
       .attr("width", width / 2)
       .attr("height", 1)
-      .attr("fill", function(d) { return colorScale(ymax - d); });
+      .attr("fill", function(d) { return colorScale(ymax - d + ymin); });
 };
 
 var elbow = function(d, i) {
@@ -188,11 +193,6 @@ var renderTree = function(tree) {
       .attr("text-anchor", "middle")
       .text(function(d) { return d.label; })
       .attr("fill", "black");
-
-  var w = 80, h = 200;
-  var legend = svg.append("g").attr("width", w * 2).attr("height", h * 2)
-    .attr("transform", "translate(" + (width - 160) + ", 50)");
-  buildLegend(colorScale, legend, w, h);
 }
 
 d3.csv("assets/allGenesT.csv", function (x) {
@@ -214,12 +214,26 @@ d3.csv("assets/allGenesT.csv", function (x) {
   $(".gene-select").select2({data: genes})
     .on("select2:select", function (e) {
       var gene = this.value;
+      var ymax = _.reduce(x, function(ymax, cell) {return Math.max(ymax, cell[gene])}, -Infinity);
+      var ymin = _.reduce(x, function(ymin, cell) {return Math.min(ymin, cell[gene])}, Infinity);
+
+      var colorScale = d3.scale.linear()
+        .domain([ymin, 0.5 * (ymin + ymax), ymax])
+        .range(["white", "#FFB03B", "#B12800"]);
+
       svg.selectAll(".node rect")
         .attr("fill", function(d) {return colorScale(d.geneValues[gene])})
       svg.selectAll(".node text")
-        .attr("fill", function(d) {return (d.geneValues[gene] > 0.8) ? "white" : "black"})
+        .attr("fill", function(d) {return ((d.geneValues[gene] - ymin) / (ymax - ymin) > 0.8) ? "white" : "black"})
+        
       d3.select(".title")
         .text(gene);
+
+      d3.select(".legendContainer").remove();
+      var legend = svg.append("g").attr("width", 160).attr("height", 400)
+        .attr("transform", "translate(" + (width - 160) + ", 50)")
+        .attr("class", "legendContainer");
+      buildLegend(colorScale, svg.select(".legendContainer"), 80, 200);
     });
 });
 
