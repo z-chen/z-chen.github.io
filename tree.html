@@ -10,13 +10,13 @@
         }
 
         .node {
-          font: 17px;
+          font-size: 24px;
         }
 
         .link {
           fill: none;
-          stroke: #ccc;
-          stroke-width: 2px;
+          stroke: #333;
+          stroke-width: 6px;
         }
 
         .tick text {
@@ -70,9 +70,8 @@ var treeLayout = d3.layout.tree()
 
 var svg = d3.select(".chart").append("svg")
     .attr("width", width)
-    .attr("height", height);
+    .attr("height", height); 
 
-var legendAxis;
 
 var tree = 
 {'cellType': 'H7 hESC',
@@ -80,19 +79,19 @@ var tree =
 'children': [
 
     {'cellType': 'APS',
-     'label': 'Ant. PS',
+     'label': 'Ant PS',
      'children': [
 
         {'cellType': 'DLL1Pos PXM',
-         'label': 'PXM',
+         'label': 'Parax Meso',
          'children': [
 
             {'cellType': 'Somite',
-             'label': 'Somite',
+             'label': 'Erly Somte',
              'children': [
 
                 {'cellType': 'Dermomyotome',
-                 'label': 'Dermomyo',
+                 'label': 'Dermo- myo',
                  'children': []},
 
                 {'cellType': 'Sclerotome',
@@ -107,11 +106,11 @@ var tree =
      'children': [
 
         {'cellType': 'LatM',
-         'label': 'Lat. Meso',
+         'label': 'Lat Meso',
          'children': [
 
             {'cellType': 'H7 Cardiac',
-             'label': 'Cardiac',
+             'label': 'Card Meso',
              'children': []}
         ]}
     ]}
@@ -123,16 +122,13 @@ var colorScale = d3.scale.linear()
 
 var buildLegend = function(colorScale, parentElem, width, height) {
     var ymax = Math.max(...colorScale.domain());
-    var ymin = Math.min(...colorScale.domain());
-
     var legend_data = [];
     for (var i = 0; i < height; i++) {
-      legend_data.push( (i / height * (ymax - ymin)) + ymin); 
-      console.log(legend_data);
+      legend_data.push(i / height * ymax); 
     }
 
     var legend_scale = d3.scale.linear()
-      .domain([ymax, ymin])
+      .domain([ymax, 0])
       .range([0, height]);
 
     var legend_axis = d3.svg.axis()
@@ -153,7 +149,7 @@ var buildLegend = function(colorScale, parentElem, width, height) {
       .attr("x", -width / 2)
       .attr("width", width / 2)
       .attr("height", 1)
-      .attr("fill", function(d) { return colorScale(ymax - d + ymin); });
+      .attr("fill", function(d) { return colorScale(ymax - d); });
 };
 
 var elbow = function(d, i) {
@@ -189,13 +185,22 @@ var renderTree = function(tree) {
 
   node.append("text")
       .attr("dx", 0)
-      .attr("dy", 3)
+      .attr("dy", 0.2)
       .attr("text-anchor", "middle")
       .text(function(d) { return d.label; })
       .attr("fill", "black");
+
+  node.selectAll("text")
+    .call(wrap, 90);
+
+  var w = 80, h = 200;
+  var legend = svg.append("g").attr("width", w * 2).attr("height", h * 2)
+    .attr("transform", "translate(" + (width - 160) + ", 50)");
+  buildLegend(colorScale, legend, w, h);
 }
 
-d3.csv("assets/allGenesT.csv", function (x) {
+//d3.csv("treeGenesT.csv", function (x) {
+d3.csv("allData.csv", function (x) {
   var augmentTree = function(node) {
     node.geneValues = _.findWhere(x, {'cellType': node.cellType});
     for (var i = 0, len = node.children.length; i < len; i++) {
@@ -214,28 +219,53 @@ d3.csv("assets/allGenesT.csv", function (x) {
   $(".gene-select").select2({data: genes})
     .on("select2:select", function (e) {
       var gene = this.value;
-      var ymax = _.reduce(x, function(ymax, cell) {return Math.max(ymax, cell[gene])}, -Infinity);
-      var ymin = _.reduce(x, function(ymin, cell) {return Math.min(ymin, cell[gene])}, Infinity);
-
-      var colorScale = d3.scale.linear()
-        .domain([ymin, 0.5 * (ymin + ymax), ymax])
-        .range(["white", "#FFB03B", "#B12800"]);
-
       svg.selectAll(".node rect")
         .attr("fill", function(d) {return colorScale(d.geneValues[gene])})
       svg.selectAll(".node text")
-        .attr("fill", function(d) {return ((d.geneValues[gene] - ymin) / (ymax - ymin) > 0.8) ? "white" : "black"})
-        
+        .attr("fill", function(d) {return (d.geneValues[gene] > 0.8) ? "white" : "black"})
       d3.select(".title")
         .text(gene);
-
-      d3.select(".legendContainer").remove();
-      var legend = svg.append("g").attr("width", 160).attr("height", 400)
-        .attr("transform", "translate(" + (width - 160) + ", 50)")
-        .attr("class", "legendContainer");
-      buildLegend(colorScale, svg.select(".legendContainer"), 80, 200);
     });
 });
+
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null)
+                  .append("tspan")
+                  .attr("x", 0)
+                  .attr("y", y)
+                  .attr("dy", dy + "em")
+                  .attr("data-line-number", 0);
+    
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan")
+            .attr("x", 0)
+            .attr("y", y)
+            .attr("dy", ++lineNumber * lineHeight + dy + "em")
+            .text(word)
+            .attr("data-line-number", lineNumber);
+      }
+    }
+    
+    text.select("tspan")
+      .attr("dy", (-(lineNumber / 2) * lineHeight + dy) + "em");
+    
+  });
+}
 
 </script>
 </body>
