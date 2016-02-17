@@ -199,8 +199,7 @@ var renderTree = function(tree) {
   buildLegend(colorScale, legend, w, h);
 }
 
-//d3.csv("treeGenesT.csv", function (x) {
-d3.csv("allData.csv", function (x) {
+d3.csv("assets/allData.csv", function (x) {
   var augmentTree = function(node) {
     node.geneValues = _.findWhere(x, {'cellType': node.cellType});
     for (var i = 0, len = node.children.length; i < len; i++) {
