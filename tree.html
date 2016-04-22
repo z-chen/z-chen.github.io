@@ -37,18 +37,47 @@
           width: 600px;
           margin-left: auto;
           margin-right: auto;
-          padding-top: 100px;
+          padding-top: 30px;
         }
 
         .chart h1 {
           margin-bottom: 0px;
           margin-left: 10px;
         }
+
+        div.description {
+            font-size: 14px;
+        }
     </style>
     <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <body>
     <div class="container">
+      <div class='description'>
+        <h2>Human mesoderm gene expression atlas</h2>
+        <p>This is a resource of different genes expressed across multiple successive stages of human mesoderm development. To access the expression pattern of a given gene, click the drop down box below and select the gene name of interest or type it in manually (<a href="http://www.ncbi.nlm.nih.gov/gene">NCBI official gene symbols</a> are accepted).</p>
+
+        <p>In the schematized mesoderm developmental lineage hierarchy below, each box represents a given cell-type and the intensity of shading represents the expression of a given gene in that cell-type, with respect to the heatmap scale on the right (where log2 gene expression is shown). Expression of each gene is normalized such that within all mesoderm lineages examined, the cell-type with highest expression is assigned the maximum expression value.</p>
+
+          <p>All data are derived from bulk-population RNA-sequencing of H7 human embryonic stem cells and their mesodermal progeny. Detailed experimental methods pertaining to stem-cell differentiation, sequencing library preparation and computational analysis are described in the Supplementary Experimental Procedures accompanying Loh & Chen et al. (2016).
+          </p>
+
+          <h3>Abbreviations:</h3>
+          <p>Human embryonic stem cells (hESCs); Anterior primitive streak (Ant PS); Mid primitive streak (Mid PS); DLL1-sorted paraxial mesoderm (Parax Meso); Lateral mesoderm (Lat Meso); Early somite (Erly Smte); Dermomyotome (Dermomyo); PDGFRA-sorted sclerotome (Sclero); GARP-sorted cardiac mesoderm (Card Meso).
+          </p>
+
+          <h3>Contact:</h3>
+          <p>pangwei@cs.stanford.edu, zhenghao@cs.stanford.edu</p>
+
+          <h3>Citation:</h3>
+          <p style='font-size:14px'>Loh & Chen et al. (2016). Mapping the pairwise choices leading from pluripotency to human bone, heart and other mesoderm cell-types. Cell, accepted.</p>
+          
+          <!--TODO:
+          (insert bibliographic information/PubMed ID when confirmed). 
+
+          Representative Examples: (Maybe 2-3 heatmaps to show nice lineage-specific genes and to emphasize the usefulness of the atlas)
+          -->
+      </div>
       <select class="gene-select" style="width:200px"></select>
       <div class="chart">
         <h1 class="title"></h1>
