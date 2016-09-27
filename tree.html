@@ -55,11 +55,23 @@
     <div class="container">
       <div class='description'>
         <h2>Human mesoderm gene expression atlas</h2>
-        <p>This is a resource of different genes expressed across multiple successive stages of human mesoderm development. To access the expression pattern of a given gene, click the drop down box below and select the gene name of interest or type it in manually (<a href="http://www.ncbi.nlm.nih.gov/gene">NCBI official gene symbols</a> are accepted).</p>
+        <p>This is a resource of different genes expressed across multiple successive stages of human mesoderm development, as measured through bulk-population RNA-seq. To access the expression pattern of a given gene, click the drop down box below and select the gene name of interest or type it in manually (<a href="http://www.ncbi.nlm.nih.gov/gene">NCBI official gene symbols</a> are accepted).</p>
 
         <p>In the schematized mesoderm developmental lineage hierarchy below, each box represents a given cell-type and the intensity of shading represents the expression of a given gene in that cell-type, with respect to the heatmap scale on the right (where log2 gene expression is shown). Expression of each gene is normalized such that within all mesoderm lineages examined, the cell-type with highest expression is assigned the maximum expression value.</p>
 
           <p>All data are derived from bulk-population RNA-sequencing of H7 human embryonic stem cells and their mesodermal progeny. Detailed experimental methods pertaining to stem-cell differentiation, sequencing library preparation and computational analysis are described in the Supplementary Experimental Procedures accompanying Loh & Chen et al. (2016).
+          </p>
+
+          <p>For ease of use, we have also prepared a spreadsheet with TPM values for each gene, augmented with the following information on each gene:
+            <ol>
+                <li> whether the gene product is present on the cell surface (GO code GO:0009986) </li>
+                <li> for each pair of adjacent conditions, whether the gene was differentially expressed between those conditions </li>
+                <li> the shrunken log-fold-change for that gene between those conditions. </li>
+            </ol>
+            (2) and (3) are called by DESeq2 (Love, Huber, Anders, Genome Biology, 2014).
+            To make the spreadsheet easier to manipulate, we have only included genes that are differentially expressed in at least one pair of conditions.
+            The spreadsheet can be found <a href="https://figshare.com/articles/Annotated_bulk-population_RNA-seq_data_on_a_mesoderm_differentiation_dataset/3842835">here</a>.
+            The raw data can be found in SRA (accession number SRP073808), with full TPM spreadsheets in GEO (accession number GSE85066).
           </p>
 
           <h3>Abbreviations:</h3>
@@ -71,7 +83,9 @@
              <a href="mailto:zhenghao@cs.stanford.edu">zhenghao@cs.stanford.edu</a></p>
 
           <h3>Citation:</h3>
-          <p style='font-size:14px'>Loh & Chen et al. (2016). Mapping the pairwise choices leading from pluripotency to human bone, heart and other mesoderm cell-types. Cell, accepted.</p>
+          <a href="http://www.cell.com/cell/abstract/S0092-8674(16)30740-1">
+              <p style='font-size:14px'>Loh & Chen et al. (2016). Mapping the pairwise choices leading from pluripotency to human bone, heart and other mesoderm cell-types. Cell.</p>
+          </a>
           
           <!--TODO:
           (insert bibliographic information/PubMed ID when confirmed). 
