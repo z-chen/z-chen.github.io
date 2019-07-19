@@ -80,9 +80,7 @@ const App = React.createClass({
         <p>My main interests are in machine learning, statistics, and data analysis and visualization.</p>
         <p>Before this, I was a data scientist and engineer at <a href="https://www.coursera.org">Coursera</a> for 5 years.
         I got my B.S. and M.S. (in Computer Science) at Stanford where I worked
-        with <a href="http://www.andrewng.org/">Andrew Ng</a> and
-        <a href="http://ai.stanford.edu/users/koller/">Daphne Koller</a>
-        on deep learning and computational biology.</p>
+        with <a href="http://www.andrewng.org/">Andrew Ng</a> and <a href="http://ai.stanford.edu/users/koller/">Daphne Koller</a> on deep learning and computational biology.</p>
       </div>
 
     var research_sidebar = <div className="sidebar">
