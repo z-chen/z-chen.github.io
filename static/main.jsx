@@ -74,8 +74,8 @@ const App = React.createClass({
 
     var introduction = <div>
         <p>I'm a principal ML engineer on the computing team at <a href="https://www.calicolabs.com">Calico Labs</a> &mdash;
-        a biotech startup that studies aging and how that might allow us to devise enable people to live longer and
-        healthier lives. At Calico, my work focues on building models for understanding perturbations
+        a biotech startup that studies aging and ways to enable people to live longer and
+        healthier lives. At Calico, my work focuses on building models for understanding perturbations
         to cellular state (e.g. cell morphology), spatial profiling and time-series analysis.</p>
         <p>My main interests are in machine learning, statistics, and data analysis and visualization.</p>
         <p>Before this, I was a data scientist and engineer at <a href="https://www.coursera.org">Coursera</a> for 5 years.
