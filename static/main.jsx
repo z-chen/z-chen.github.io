@@ -74,7 +74,7 @@ const App = React.createClass({
 
     var introduction = <div>
         <p>I'm a principal ML engineer on the computing team at <a href="https://www.calicolabs.com">Calico Labs</a> &mdash;
-        an biotech startup that studies aging and how that might allow us to devise enable people to live longer and
+        a biotech startup that studies aging and how that might allow us to devise enable people to live longer and
         healthier lives. At Calico, my work focues on building models for understanding perturbations
         to cellular state (e.g. cell morphology), spatial profiling and time-series analysis.</p>
         <p>My main interests are in machine learning, statistics, and data analysis and visualization.</p>
@@ -150,7 +150,7 @@ const App = React.createClass({
       {title: "Modeling multiplexed images with Spatial-LDA reveals novel tissue microenvironments",
        authors: ["Chen, Z.", "Soifer, I", "Hilton, H.", "Keren, L.", "Jojic, V."],
        link: false,
-       citation: {venue: "ICML Computational Biology Workshop. (Poster, Poster Award)", bibtex: "...."}
+       citation: {venue: "2019, ICML Computational Biology Workshop. (Poster, Poster Award)", bibtex: "...."}
       },
       {title: "Content-based audio playback speed controller",
        authors: ["Ngiam, J.", "Lee, C.C.", "Charumilind, J.", "Chen, Z."],
