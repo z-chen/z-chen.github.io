@@ -73,21 +73,34 @@ const App = React.createClass({
     </div>
 
     var introduction = <div>
-        <p>I'm a data scientist (and occasional software engineer) on the analytics team at <a href="https://coursera.org">Coursera</a> &mdash;
-        an edtech startup that's trying to make university-level education accessible to a wider audience.</p>
+        <p>I'm a principal ML engineer on the computing team at <a href="https://www.calicolabs.com">Calico Labs</a> &mdash;
+        an biotech startup that studies aging and how that might allow us to devise enable people to live longer and
+        healthier lives. At Calico, my work focues on building models for understanding perturbations
+        to cellular state (e.g. cell morphology), spatial profiling and time-series analysis.</p>
         <p>My main interests are in machine learning, statistics, and data analysis and visualization.</p>
-        <p>Before this, I got my B.S. and M.S. (in Computer Science) at Stanford where I worked
-        with <a href="http://www.andrewng.org/">Andrew Ng</a> and <a href="http://ai.stanford.edu/users/koller/">Daphne Koller</a> on deep learning and computational biology.</p>
+        <p>Before this, I was a data scientist and engineer at <a href="https://www.coursera.org">Coursera</a> for 5 years.
+        I got my B.S. and M.S. (in Computer Science) at Stanford where I worked
+        with <a href="http://www.andrewng.org/">Andrew Ng</a> and
+        <a href="http://ai.stanford.edu/users/koller/">Daphne Koller</a>
+        on deep learning and computational biology.</p>
       </div>
 
     var research_sidebar = <div className="sidebar">
       Research Publications
       <p style={{paddingTop: "10px"}}>
-        <a href="https://scholar.google.com/citations?user=8vZCyCcAAAAJ&hl=en&oi=ao">Google Scholar</a>
+        <a href="https://scholar.google.com/citations?user=dGPqP-wAAAAJ&hl=en">Google Scholar</a>
       </p>
     </div>
 
     var research_work = [
+      {title: "Mapping the pairwise choices leading from pluripotency to human bone, heart, and other mesoderm cell types",
+       authors: ["Loh, K.M.", "Chen, A.", "Koh, P.W.", "Deng, T.Z.", "Sinha, R.", "Tsai, J.M.", "Barkal, A.A.",
+       "Shen, K.Y.", "Jain, R.", "Morganti, R.M.", "Shyh-Chang, N.", "Fernhoff, N.B.", "George, B.M.", "Wernig, G.",
+       "Salomon, R.E.", "Chen, Z.", "Vogel, H.", "Epstein, J.A.", "Kundaje, A.", "Talbot, W.S.", "Beachy, P.A.",
+       "Ang, L.T.", "Weissman, I.L."],
+       link: "https://www.sciencedirect.com/science/article/pii/S0092867416307401",
+       citation: {venue: "2016, Cell", bibtex: false}
+      },
       {title: "Tuned Models of Peer Assessment in MOOCs",
        authors: ["Piech, C.", "Huang, J.", "Chen, Z.", "Do, C.", "Ng, A.Y.", "Koller, D."],
        link: "http://arxiv.org/pdf/1307.2579v1.pdf",
@@ -136,6 +149,16 @@ const App = React.createClass({
     })
     
     var talks_and_other_publications = [
+      {title: "Modeling multiplexed images with Spatial-LDA reveals novel tissue microenvironments",
+       authors: ["Chen, Z.", "Soifer, I", "Hilton, H.", "Keren, L.", "Jojic, V."],
+       link: false,
+       citation: {venue: "ICML Computational Biology Workshop. (Poster, Poster Award)", bibtex: "...."}
+      },
+      {title: "Content-based audio playback speed controller",
+       authors: ["Ngiam, J.", "Lee, C.C.", "Charumilind, J.", "Chen, Z."],
+       link: "https://patents.google.com/patent/US9741392B2/en",
+       citation: {venue: "USPTO 2019. (Patent)", bibtex: "...."}
+      },
       {title: "Who’s Benefiting from MOOCs, and Why?",
        authors: ["Chen, Z.", "Alcorn, B.", "Christensen, G.", "Eriksson, N.", "Koller, D.", "Emanuel, E.J."],
        link: "https://hbr.org/2015/09/whos-benefiting-from-moocs-and-why",
@@ -185,9 +208,12 @@ const App = React.createClass({
 
       <p>
         I joined <a href="https://coursera.org">Coursera</a> in 2012 as an early employee and was one of the first 2 members of 
-        the analytics team. At Coursera, I build core data infrastructure (such as our A/B testing platform and 
-        recommendations system), inform decision making through the use of data, and helped grow the team to its current size of about 
-        20 people.
+        the analytics team. At Coursera, I built core data infrastructure including: our A/B testing platform 
+        which served 100s of experiments a month, our recommendations system and data-driven content categorization / ontology,
+        ETL tools for data scientists, systems for curating data analysis and more.
+        I was also heavily involved in driving key decision making through the use of data including leading what
+        was then the largest ever empirical study on the effectiveness of MOOCs and determinants of quality in
+        online education / MOOCs.
       </p>
 
       <p>
