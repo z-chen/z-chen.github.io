@@ -147,6 +147,11 @@ const App = React.createClass({
     })
     
     var talks_and_other_publications = [
+      {title: "Learning good representaions of cell state from cell painting",
+       authors: ["Chen, Z.", "Jan, C.", "Li, Frank.", "Xu, J."],
+       link: false,
+       citation: {venue: "2019, NeurIPS Learning Meaningful Representations of Life Workshop. (Poster, Flash Talk)", bibtex: "...."}
+      },
       {title: "Modeling multiplexed images with Spatial-LDA reveals novel tissue microenvironments",
        authors: ["Chen, Z.", "Soifer, I", "Hilton, H.", "Keren, L.", "Jojic, V."],
        link: false,
