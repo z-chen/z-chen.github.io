@@ -73,7 +73,7 @@ const App = React.createClass({
     </div>
 
     var introduction = <div>
-        <p>I'm a principal ML engineer on the computing team at <a href="https://www.calicolabs.com">Calico Labs</a> &mdash;
+        <p>I'm a principal ML engineer on the computing team at <a href="https://www.calicolabs.com">Calico Life Sciences</a> &mdash;
         a biotech startup that studies aging and ways to enable people to live longer and
         healthier lives. At Calico, my work focuses on building models for understanding perturbations
         to cellular state (e.g. cell morphology), spatial profiling and time-series analysis.</p>
@@ -225,10 +225,7 @@ const App = React.createClass({
       </p>
 
       <p>
-        Skills-wise, I am fluent in English, Mandarin Chinese, Python, R, Javascript and SQL. I am somewhat competent in Matlab, C, Java, and Scala.
-        I am comfortable with *nix and have experience operating in the AWS cloud.
-        I am also familiar with MapReduce (and some other large scale data processing tech.), relational DBs, implementing
-        and debugging machine learning algorithms, data visualization, and regression and statistical analysis.
+        Language-wise, I am fluent in English, Mandarin Chinese, Python, R, Javascript and SQL. I am somewhat competent in Matlab, C, Java, and Scala.
       </p>
     
     </div>
@@ -262,13 +259,14 @@ const App = React.createClass({
         <Section id="1" title={sidebar} contents={introduction}/>
         <Section id="2" title={research_sidebar} contents={research_work_components}/>
         <Section id="3" title="Articles and Talks" contents={talks_and_other_publications_components}/>
-        <Section id="4" title="Education and Work Background" contents={education_and_work_background}/>
+        <Section id="4" title="Education and Work History" contents={education_and_work_background}/>
         <Section id="5" title="About Me" contents={about_me}/>
         <Section id="6" title="Getting in Touch" contents={contacting_me}/>
       </div>
       );
   }
 });
+
 
 ReactDOM.render(
   <App/>,

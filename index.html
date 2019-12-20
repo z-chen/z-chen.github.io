@@ -8,13 +8,29 @@
 
     <title>Zhenghao Chen</title>
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/layout.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+
 
   </head>
   <body>
     <div id="main"></div>
     <script src="static/build/bundle.js"></script>
+    <script>
+        var pattern = Trianglify({
+            width: window.innerWidth,
+            height: window.innerHeight,
+            cell_size: 50,
+            variance: 1.0,
+            x_colors: [
+            // "#d73027",
+            "#f46d43", "#fdae61", "#fdae61", "#fee090", "#ffffbf", "#ffffbf", "#ffffbf",
+            "#e0f3f8", "#abd9e9", "#abd9e9", "#74add1",] //  "#4575b4",  
+        });
+        dataurl = "url('" + pattern.png() + "')"
+        document.body.setAttribute('style', 'background-image: ' + dataurl);
+    </script>
   </body>
 </html>
