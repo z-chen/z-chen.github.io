@@ -271,7 +271,7 @@
      cursor: pointer;
  }
 
- body.dark .lightmode::after {
+/* body.dark .lightmode i::after {
 	content: '';
 	position: absolute;
     bottom: 0px;
@@ -282,14 +282,15 @@
     transform: scale(0);
 	transform-origin: center;
     transition: transform 0.5s ease-out;
-}
+} */
 
  body:not(.dark) .lightmode {
     color: #cb4b16;
     transition: color 0.5s ease-out;
 }
 
- body:not(.dark) .lightmode::after {
+/*
+ body:not(.dark) .lightmode i::after {
 	content: '';
 	position: absolute;
     bottom: 0px;
@@ -302,7 +303,7 @@
     transition: transform 0.5s ease-out, background-color 0.5s ease-out;
 }
 
- body:not(.dark) .darkmode::after {
+ body:not(.dark) .darkmode i::after {
 	content: '';
 	position: absolute;
     bottom: 0px;
@@ -314,11 +315,14 @@
 	transform-origin: center;
     transition: transform 0.5s ease-out;
 }
+
+*/
  body.dark .darkmode {
 	color: #f7976e;
     transition: color 0.5s ease-out;
 }
- body.dark .darkmode::after {
+/*
+ body.dark .darkmode i::after {
 	content: '';
 	position: absolute;
     bottom: 0px;
@@ -330,7 +334,7 @@
 	transform-origin: center;
     transition: transform 0.5s ease-out, background-color 0.5s ease-out;
 }
-
+*/
  body.dark .glider-prev, body.dark .glider-next {
     color: #fdf6e3;
 }
@@ -375,9 +379,11 @@
          right: 0px;
          width: 2.1em;
     }
-     body.dark .darkmode::after {
+    /*
+     body.dark .darkmode i::after {
          left: 50%;
     }
+    */
      .copyright{
          position: absolute;
          text-align: right;
@@ -471,9 +477,11 @@
          opacity: 1;
          transition: opacity 1.2s ease-in, left 1.2s ease-in, bottom 1.2s ease-in;
     }
-     body.dark .darkmode::after {
+    /*
+     body.dark .darkmode i::after {
          left: 50%;
     }
+    */
      .copyright{
          position: absolute;
          text-align: right;
@@ -538,9 +546,11 @@
          left: 0px;
          right: 0px;
     }
-     body.dark .darkmode::after {
+    /*
+     body.dark .darkmode i::after {
          left: 50%;
     }
+    */
      .copyright{
          right: 15%;
          bottom: 5%;
