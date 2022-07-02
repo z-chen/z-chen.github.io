@@ -175,13 +175,14 @@
      width: 220%;
      max-width: 220%;
      height: auto;
-     max-height: 90%;
-     transition: max-width 0.5s ease-in, opacity 1.2s ease-in, transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+     max-height: 80vh;
      -webkit-transform: translateY(0) translateX(-27.27%);
      -webkit-transform-origin: center;
      transform: translateY(0) translateX(-27.27%);
      transform-origin: center;
      filter: brightness(1.1);
+     transition: max-width 0.5s ease-in, opacity 1.2s ease-in, transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+     -webkit-transition: None;
 }
  body.dark .glider-persp .glider-slide.center img {
      filter: brightness(0.9);
@@ -450,6 +451,7 @@
          height: auto;
          max-height: 200%;
          transition: max-width 0.5s ease-in, opacity 1.2s ease-in, transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+         -webkit-transition: None;
          -webkit-transform: translateY(0) translateX(-31.132%);
          -webkit-transform-origin: center;
          transform: translateY(0) translateX(-31.132%);
@@ -520,6 +522,7 @@
          height: auto;
          max-height: 70vh;
          transition: max-width 0.5s ease-in, opacity 1.2s ease-in, transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+         -webkit-transition: None;
          -webkit-transform: translateY(0) translateX(-25%);
          -webkit-transform-origin: center;
          transform: translateY(0) translateX(-25%);
