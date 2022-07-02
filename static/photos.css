@@ -125,7 +125,7 @@
  .glider-persp .glider-slide.right-2 {
      opacity: 0.1;
      -webkit-transform: perspective(1500px) rotateY(-89deg) scale(0.6);
-     -webkit-transform-origin: 100% 50% 0;
+     -webkit-transform-origin: center;
      transform: perspective(1500px) rotateY(-89deg) scale(0.6);
      transform-origin: center;
      transition: opacity 1.2s ease-in-out;
@@ -134,7 +134,7 @@
  .glider-persp .glider-slide.left-2 {
      opacity: 0.1;
      -webkit-transform: perspective(1500px) rotateY(89deg) scale(0.6) translateY(20%) translateX(-90%);
-     -webkit-transform-origin: 100% 50% 0;
+     -webkit-transform-origin: center;
      transform: perspective(1500px) rotateY(89deg) scale(0.6) translateY(20%) translateX(-90%);
      transform-origin: center;
      transition: opacity 1.2s ease-in-out;
@@ -142,8 +142,8 @@
 }
  .glider-persp .glider-slide.left-1 {
      opacity: 0.25;
-     -webkit-transform: perspective(1500px) rotateY(70deg) scale(0.7) translateY(20%) translateX(-90%);
-     -webkit-transform-origin: 100% 50% 0;
+     -webkit-transform: perspective(1500px) rotateY(70deg) scale(0.7) translateY(0%) translateX(-90%);
+     -webkit-transform-origin: center;
      transform: perspective(1500px) rotateY(70deg) scale(0.7) translateY(20%) translateX(-90%);
      transform-origin: center;
      transition: opacity 1.2s ease-in-out, transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -151,8 +151,8 @@
 }
  .glider-persp .glider-slide.right-1 {
      opacity: 0.25;
-     -webkit-transform: perspective(1500px) rotateY(-70deg) scale(0.7) translateY(20%) translateX(90%);
-     -webkit-transform-origin: 0 50% 0;
+     -webkit-transform: perspective(1500px) rotateY(-70deg) scale(0.7) translateY(0%) translateX(90%);
+     -webkit-transform-origin: center;
      transform: perspective(1500px) rotateY(-70deg) scale(0.7) translateY(20%) translateX(90%);
      transform-origin: center;
      transition: opacity 1.2s ease-in-out, transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -398,6 +398,7 @@
      .glider-contain {
          width: 95%;
          max-width: None;
+         max-height: 55vw;
     }
      .glider-prev {
          display: None;
@@ -418,8 +419,8 @@
     }
      .glider-persp .glider-slide.left-1 {
          opacity: 0.25;
-         -webkit-transform: perspective(1500px) rotateY(70deg) scale(0.7) translateY(20%) translateX(-100%);
-         -webkit-transform-origin: 100% 50% 0;
+         -webkit-transform: perspective(1500px) rotateY(70deg) scale(0.7) translateY(0%) translateX(-100%);
+         -webkit-transform-origin: center;
          transform: perspective(1500px) rotateY(70deg) scale(0.7) translateY(20%) translateX(-100%);
          transform-origin: center;
          transition: opacity 1.2s ease-in-out, transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -427,8 +428,8 @@
     }
      .glider-persp .glider-slide.right-1 {
          opacity: 0.25;
-         -webkit-transform: perspective(1500px) rotateY(-70deg) scale(0.7) translateY(20%) translateX(100%);
-         -webkit-transform-origin: 0 50% 0;
+         -webkit-transform: perspective(1500px) rotateY(-70deg) scale(0.7) translateY(0%) translateX(100%);
+         -webkit-transform-origin: center;
          transform: perspective(1500px) rotateY(-70deg) scale(0.7) translateY(20%) translateX(100%);
          transform-origin: center;
          transition: opacity 1.2s ease-in-out, transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -517,7 +518,7 @@
          width: 200%;
          max-width: 200%;
          height: auto;
-         max-height: 85%;
+         max-height: 70vh;
          transition: max-width 0.5s ease-in, opacity 1.2s ease-in, transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
          -webkit-transform: translateY(0) translateX(-25%);
          -webkit-transform-origin: center;
