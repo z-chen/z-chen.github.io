@@ -2,7 +2,8 @@
 /* General */
 
 body {
-    font-family: "Nunito";
+    font-family: "Quattrocento";
+    color: #586E75;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -29,7 +30,7 @@ a {
   text-decoration: none;
   -webkit-transition: color 200ms ease-in-out,border 200ms ease-in-out;
   transition: color 200ms ease-in-out,border 200ms ease-in-out,font-weight 200ms ease-in-out;
-  border-bottom: 2px dotted #C41E3A;
+  border-bottom: 2px dotted #dc322f; /* #C41E3A; */
   color: inherit;
   font-weight: bold;
 }
@@ -40,10 +41,10 @@ a:visited{
 }
 
 a:hover{
-  color: #C41E3A;
+  /* color: #C41E3A; */
+  color: #dc322f;
   border-bottom: 1px dotted transparent;
   text-decoration: none;
-  font-weight: 300;
 }
 
 

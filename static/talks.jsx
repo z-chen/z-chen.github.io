@@ -42,6 +42,11 @@ const Publication = React.createClass({
 })
 
 var talks_and_other_publications = [
+  {title: "Automatically generated flash cards",
+   authors: ["Chen, Z.", "Ngiam, J.", "Koller, D"],
+   link: "https://patents.google.com/patent/US10453354B2/en",
+   citation: {venue: "USPTO 2019. (Patent)", bibtex: "...."}
+  },
   {title: "Learning good representaions of cell state from cell painting",
    authors: ["Chen, Z.", "Jan, C.", "Li, Frank.", "Xu, J."],
    link: false,

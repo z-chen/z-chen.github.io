@@ -5,8 +5,8 @@ export var about_me = <div>
   <p>
 	I was born and raised in Singapore where I picked up my love of Computer Science and cheap, tasty food.
 	In Singapore, I served in the Singapore Armed Forces as a Signals officer and was awarded the Sword of Honour 
-	(best overall officer cadet in my graduating class). I enjoy cooking and travelling and I once spent a month
-	training to be a safari guide with my good friend (and frequent collaborator) <a href="http://cs.stanford.edu/~pangwei/">Pang Wei Koh</a>.
+	(top overall officer cadet in my graduating class). I enjoy cooking and travelling and I once spent a month
+	training to be a safari guide with my good friend <a href="http://cs.stanford.edu/~pangwei/">Pang Wei Koh</a>.
 	I also enjoy reading non-fiction, especially books on military history.
   </p>
 
@@ -16,6 +16,12 @@ export var about_me = <div>
 	Before starting at Stanford, Pang Wei and I planned and taught
 	a collection of 14 full-day workshops introducting concepts in CS, AI, cryptography and computer networking to
 	over a hundred high school students.
+  </p>
+  
+  <p>
+    I helped start and currently serve on the board of <a href="https://pdquery.org">PDQuery</a> a 501(c)(3) non-profit
+    that aims to boost STEM literacy in the criminal justice system by connecting public defenders who require
+    STEM expertise with expert volunteers.
   </p>
 
 </div>
