@@ -49,9 +49,9 @@
      {"src": "assets/photos/full/California/img0026.png", "title": "Pfeiffer Big Sur State Park"},
      {"src": "assets/photos/full/California/img0029.png", "title": "Big Sur"},
      {"src": "assets/photos/full/California/img0030.png", "title": "Highway 1"},
-     {"src": "assets/photos/full/California/img0031.png", "title": "Big Sur"}
+     {"src": "assets/photos/full/California/img0031.png", "title": "Big Sur"},
      {"src": "assets/photos/full/California/img0027.png", "title": "Mt Sutro"},
-     {"src": "assets/photos/full/California/img0028.png", "title": "Pinnacles National Park"},
+     {"src": "assets/photos/full/California/img0028.png", "title": "Pinnacles National Park"}
   ],
   "Animals": [
      {"src": "assets/photos/full/Animals/img0001.png", "title": "Leopard in the underbrush"},
@@ -75,7 +75,7 @@
   "Travel": [
      {"src": "assets/photos/full/Travel/img0001.png", "title": "Sunset over the Masai Mara"},
      {"src": "assets/photos/full/Travel/img0002.png", "title": "Sweetlips in the great barrier reef"},
-     {"src": "assets/photos/full/Animals/img0016.png", "title": "Bumphead parrotfish"}
+     {"src": "assets/photos/full/Animals/img0016.png", "title": "Bumphead parrotfish"},
      {"src": "assets/photos/full/Travel/img0003.png", "title": "Tokyo train station"},
      {"src": "assets/photos/full/Travel/img0004.png", "title": "Tokyo train station"},
      {"src": "assets/photos/full/Travel/img0005.png", "title": "Subway train (Tokyo)"},
@@ -83,7 +83,7 @@
      {"src": "assets/photos/full/Travel/img0007.png", "title": "Katsu restaurant opening"},
      {"src": "assets/photos/full/Travel/img0008.png", "title": "Omotesando (Tokyo)"},
      {"src": "assets/photos/full/Travel/img0009.png", "title": "Farmers market (Tokyo)"},
-     {"src": "assets/photos/full/Travel/img0024.png", "title": "Oahu"}
+     {"src": "assets/photos/full/Travel/img0024.png", "title": "Oahu"},
      {"src": "assets/photos/full/Travel/img0010.png", "title": "Flea market (London)"},
      {"src": "assets/photos/full/Travel/img0011.png", "title": "Tower bridge (London)"},
      {"src": "assets/photos/full/Travel/img0012.png", "title": "Brick lane market (London)"},
@@ -97,6 +97,6 @@
      {"src": "assets/photos/full/Travel/img0015.png", "title": "Vernazza"},
      {"src": "assets/photos/full/Travel/img0018.png", "title": "Vernazza"},
      {"src": "assets/photos/full/Travel/img0019.png", "title": "Riomaggiore"},
-     {"src": "assets/photos/full/Travel/img0023.png", "title": "Sunset over the Amalfi coast"},
+     {"src": "assets/photos/full/Travel/img0023.png", "title": "Sunset over the Amalfi coast"}
   ]
 }
