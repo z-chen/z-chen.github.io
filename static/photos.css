@@ -415,7 +415,7 @@
      .glider-slide h3 {
          width: 100%;
          text-align: center;
-         font-size: 1em;
+         font-size: 0.7em;
          font-weight: normal;
     }
      .glider-persp .glider-slide.left-1 {
@@ -507,7 +507,7 @@
          font-size: 1.5em;
     }
      .glider-slide h3 {
-         font-size: 1em;
+         font-size: 0.7em;
     }
      .content {
          padding-top: 30px;
