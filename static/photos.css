@@ -78,9 +78,6 @@
      aspect-ratio: 16/9;
      max-height: 90vh;
 }
- .glider-track {
-     height: 100%;
-}
  .glider-slide {
      padding-left: 7px;
      padding-right: 7px;
