@@ -2,7 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 export var introduction = <div>
-    <p>I'm an Associate Director of Machine Learning at <a href="https://www.calicolabs.com">Calico Life Sciences</a> &mdash;
+    <p>I'm a Director of Machine Learning at <a href="https://www.calicolabs.com">Calico Life Sciences</a> &mdash;
     a biotech company that studies aging to enable people to live longer and
     healthier lives. At Calico, my work focuses on building models for understanding perturbations
     to cellular state (e.g. cell morphology), spatial profiling and high-dimensional time-series analysis.</p>
