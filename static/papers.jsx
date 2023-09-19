@@ -41,6 +41,13 @@ const Publication = React.createClass({
 })
 
 var paper_listing = [
+  {title: "Senescence rewires microenvironment sensing to facilitate antitumor immunity.",
+   authors: ["Chen, H", "Ho, Y", "Mezzadra, R", "Adrover, JM", "Smolkin, R", "Zhu, C", "Woess, K",
+   "Bernstein, N", "Schmitt, G", "Fong, L", "Luan, W", "Wuest, A", "Tian, S", "Li, X", "Broderick, C",
+   "Hendrickson, RC", "Egeblad, M", "Chen, Z", "Alonso-Curbelo, D", "Lowe, SW"],
+   link: "https://aacrjournals.org/cancerdiscovery/article/13/2/432/716311",
+   citation: {venue: "2023, Cancer Discovery", bibtex: false}
+  },
   {title: "The immunoregulatory landscape of human tuberculosis granulomas.",
    authors: ["McCaffrey, E.F.", "Donato, M.", "Keren, L.", "Chen, Z.", "Delmastro, A.", "Fitzpatrick, M.B.", "Gupta, S.", "Greenwald, N.F.",
    "Baranski, A.", "Graf, W.", "Kumar, R.", "Bosse, M.", "Camacho Fullaway, C.", "Ramdial, P.K.", "Forgó, E.", "Jojic, V.",
