@@ -12,13 +12,14 @@ export var work_history = <div>
   </p>
 
   <p>
-	I joined <a href="https://coursera.org">Coursera</a> in 2012 as an early employee and was one of the first 2 members of 
-	the analytics team. At Coursera, I built core data infrastructure including: our A/B testing platform 
-	which served 100s of experiments a month, our recommendations system and data-driven content categorization / ontology,
+	I joined <a href="https://coursera.org">Coursera</a> in 2012 as an early employee and was one of the founding members of 
+	the data science and analytics team. At Coursera, I built core data infrastructure including: our A/B testing platform 
+	which served hundreds of experiments a month, our recommendations system and data-driven content categorization / ontology,
 	ETL tools for data scientists, systems for curating data analysis and more.
-	I was also heavily involved in driving key decision making through the use of data including leading what
-	was then the largest ever empirical study on the effectiveness of MOOCs and determinants of quality in
-	online education / MOOCs.
+	I was also heavily involved in driving key decisions through the use of data including building our first user growth models,
+    carrying out the largest ever empirical study on the effectiveness of MOOCs and determinants of quality in
+	online education / MOOCs at that time and measuring the real-world, practical impact on users and using that to
+    optimize the learner experience and course catalog.
   </p>
 
   <p>
@@ -27,7 +28,8 @@ export var work_history = <div>
   </p>
 
   <p>
-	Language-wise, I am fluent in English, Mandarin Chinese, Python, R, Javascript and SQL. I am somewhat competent in Matlab, C, Java, and Scala.
+	Language-wise, I am fluent in English and Mandarin Chinese.
+    Programming languages-wise, I am fluent in Python and Javascript. I am somewhat competent in Scala, Java, C, R and Matlab.
   </p>
 
 </div>
