@@ -309,7 +309,6 @@ body .screen.active {
 @media (max-width: 600px) and (orientation: portrait) {
      .selector-widget {
          position: absolute;
-         bottom: 20px;
          left: 20px;
          font-weight: 100;
          font-size: 1em;
@@ -338,7 +337,6 @@ body .screen.active {
 @media (max-width: 900px) and (orientation: landscape) {
      .selector-widget {
          position: absolute;
-         bottom: 10px;
          left: 10px;
          font-weight: 100;
          font-size: 1.6em;
