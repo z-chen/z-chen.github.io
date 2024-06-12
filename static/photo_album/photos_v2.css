@@ -318,14 +318,23 @@ body .screen.active {
     .slide-widget {
         display: None;
     }
-     .copyright{
+    .next-image, .prev-image {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        border: solid 2px rgba(255, 255, 255, 0.0);
+    }
+    .next-image>i, .prev-image>i {
+        font-size: 1em;
+    }    
+    .copyright{
          position: absolute;
          text-align: right;
          top: 10px;
          right: 10px;
          max-width: 33%;
     }
-     .copyright p{
+    .copyright p{
          margin: 2px;
          font-size: 0.8em;
     }
