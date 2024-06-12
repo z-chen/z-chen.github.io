@@ -315,15 +315,13 @@ body .screen.active {
          opacity: 1;
          transition: opacity 1.2s ease-in, left 1.2s ease-in;
     }
-    .slide-widget {
-        display: None;
-    }
     .next-image, .prev-image {
+        top: calc(50svh - 16px);
         width: 30px;
         height: 30px;
         border-radius: 30px;
         border: solid 2px rgba(255, 255, 255, 0.0);
-    }
+    }    
     .next-image>i, .prev-image>i {
         font-size: 1em;
     }    
