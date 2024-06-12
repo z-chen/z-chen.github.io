@@ -321,6 +321,10 @@ body .screen.active {
         height: 30px;
         border-radius: 30px;
         border: solid 2px rgba(255, 255, 255, 0.0);
+    }
+    .next-image:hover, .prev-image:hover {
+        border: solid 2px rgba(255, 255, 255, 0.2);
+        background: rgba(100, 100, 100, 0.8);
     }    
     .next-image>i, .prev-image>i {
         font-size: 1em;
