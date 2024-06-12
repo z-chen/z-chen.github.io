@@ -350,6 +350,9 @@ body .screen.active {
          opacity: 1;
          transition: opacity 1.2s ease-in, left 1.2s ease-in, bottom 1.2s ease-in;
     }
+    .slide-widget {
+        display: None;
+    }
     .copyright{
          position: absolute;
          text-align: right;
@@ -363,6 +366,7 @@ body .screen.active {
     }
     .photo-wrapper .title {
         max-width: 50%;
+        font-size: clamp(1em, 3svw, 2.5em);
     }    
 }
 
