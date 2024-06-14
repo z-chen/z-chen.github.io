@@ -1,6 +1,6 @@
 :root {
     --foreground-text: #fdf6e3;
-}
+    --foreground-faint: #cac4b5;
 
 * {
      box-sizing: border-box 
@@ -291,16 +291,10 @@ body .screen.active {
     transition: opacity 0.5s ease-out, transform 0.5s ease-out, flex 0.5s ease-out, aspect-ratio 0.5s ease-out, border-radius 0.5s ease-out;
 }
 
-/* .page-indicator>.indicator-item::before{
-    content:'';
-    display:block;
-    padding-bottom:100%;
-} */
-
 .page-indicator>.indicator-item.active {
     flex: 4;
-    /* max-width: 60px;     */
     background-color: var(--foreground-text);
+    /* background-image: linear-gradient(to right, var(--foreground-text) 10%, var(--foreground-dark) 11%); */
     aspect-ratio: 3;
     opacity: 1;
     border-radius: 100px;

@@ -134,6 +134,21 @@ function resetNextImageTimer() {
             imageIndex = (imageIndex + 1).mod(photo_sets[active_photo_set].length);
             loadImage(imageIndex);},
         config.auto_advance);
+    // var progress = 0;    
+    // clearInterval(loadNextImageTimer);
+    // loadNextImageTimer = setInterval(() => {
+    //         if (progress === 100) {
+    //             progress = 0;
+    //             imageIndex = (imageIndex + 1).mod(photo_sets[active_photo_set].length);
+    //             loadImage(imageIndex);
+    //         } else {
+    //             progress += 0.5;
+    //             var fill = "linear-gradient(to right, var(--foreground-text) " + progress + "%, var(--foreground-faint) " + (progress + 1) + "%)";
+    //             document.querySelectorAll('.indicator-item.active').forEach((e) => {
+    //                 e.style["background-image"] = fill;
+    //             })
+    //         }
+    //     }, config.auto_advance / 200);
     }
 }
 
