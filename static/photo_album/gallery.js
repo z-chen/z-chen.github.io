@@ -257,7 +257,8 @@ window.addEventListener('load', function () {
 document.addEventListener('keydown', (e) => {
     switch (e.code) {
         case 'Escape':
-            toggleHide(photobox);
+            if (!photobox.classList.contains('hidden'))
+                toggleHide(photobox);
             // toggleHide(gallery);
     };
 });
