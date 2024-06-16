@@ -291,7 +291,9 @@ body .screen.active {
     .gallery > .figure.long {
         grid-column: auto / span 24;
     }
-
+    .photobox .title {
+        bottom: 10%;
+    }
 }
 .copyright {
     margin-left: var(--margin);
