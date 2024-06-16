@@ -1,0 +1,331 @@
+:root {
+    --foreground-text: #fdf6e3;
+    --foreground-faint: #cac4b5;
+    --margin: clamp(80px, 10svw, 200px);
+    --text-size: clamp(20px, 10svw, 30px);
+    --header-top: clamp(25px, 3svh, 80px);
+    --photobox-anim: 0.5s;
+}
+
+* {
+     box-sizing: border-box 
+}
+
+html, body {
+     font-family: "Quattrocento";
+     max-width: 100svw;
+     margin: 0px;
+     background: var(--foreground-text);
+     /* color: var(--foreground-faint); */
+     transition: all 0.5s ease-in;
+}
+
+.selector-widget {
+     position: absolute;
+     display: flex;
+     align-items: flex-start;
+     flex-wrap: wrap;
+     top: var(--header-top);
+     margin-left: var(--margin);
+     max-width: clamp(8em, 40svw, 300px);
+     font-weight: normal;
+     font-size: var(--text-size);
+     transition: opacity 1.2s ease-in, left 1.2s ease-in, bottom 1.2s ease-in;
+     z-index: 10;
+}
+
+.photobox {
+    position: fixed;
+    height: 100svh;
+    width: 100svw;
+    /* background: #000; */
+    display: flex;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 30;
+}
+
+.photobox .dismiss-btn {
+    --width: clamp(30px, 10svw, 50px);
+    --top: clamp(35px, 4svh, 90px);
+    position: absolute;
+    width: var(--width);
+    height: var(--width);
+    border-radius: var(--width);
+    top: var(--header-top);
+    right: var(--header-top);
+    z-index: 100;
+    /* border: 3px solid var(--foreground-text); */
+    color: var(--foreground-text);
+    background-color: rgba(255, 255, 255, 0.25);
+    font-size: calc(0.5 * var(--width));
+    text-align: center;
+    line-height: var(--width);
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.photobox .dismiss-btn i {
+    --width: clamp(30px, 10svw, 50px);
+    line-height: calc(var(--width));
+    font-weight: bold;
+}
+
+.photobox .photobox-display {
+    position: absolute;
+    /* margin-left: 37.5svw;
+    margin-top: 37.5svh; */
+    width: 25svw;
+    height: 25svh;
+    max-width: 100%;
+    max-height: 100%;
+    filter: saturate(110%) contrast(110%);
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity var(--photobox-anim) ease-in, width var(--photobox-anim) ease-in, height var(--photobox-anim) ease-in, margin var(--photobox-anim) ease-in, transform var(--photobox-anim) ease-in;
+}
+    
+.photobox .photobox-fill {
+    position: absolute;
+    width: 25svw;
+    height: 25svh;
+    filter: grayscale(0.1) brightness(0.75) blur(12px);
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity var(--photobox-anim) ease-in, width var(--photobox-anim) ease-in, height var(--photobox-anim) ease-in, margin var(--photobox-anim) ease-in, transform var(--photobox-anim) ease-in;
+}
+
+.photobox .photobox-fill.loaded, .photobox .photobox-display.loaded {
+    opacity: 1;
+}
+
+.photobox .photobox-fill.loaded {
+    width: 105svw;
+    height: 105svh;
+    max-width: 105%;
+    max-height: 105%;
+    left: -2.55svw;
+    top: -2.5svh;
+}
+
+.photobox .title {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    font-weight: 100;
+    font-size: var(--text-size);
+    z-index: 4;
+    max-width: 70vw;
+    color: var(--foreground-text);
+    transform: translateY(0px);
+    transition: transform 0.5s var(--photobox-anim) ease-out, opacity 0.5s 0.5s ease-out;
+}
+  
+.gallery {
+    --numCols: 72;
+    --gutter: clamp(6px, 2svw, 10px);
+    --containerWidth: calc(100svw - (2 * var(--margin)));
+    --rowHeight: calc((var(--containerWidth) - ((var(--numCols) - 1) * var(--gutter))) / var(--numCols));
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(var(--numCols), 1fr);
+    grid-auto-rows: var(--rowHeight);
+    width: var(--containerWidth);
+    gap: var(--gutter);
+    margin-top: clamp(100px, 10svh, 170px);
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+}
+
+.gallery > .figure {
+    cursor: pointer;
+    /* box-shadow: 8px 6px 0 var(--foreground-faint); */
+}
+
+.gallery > .figure.pano {
+    grid-column: auto / span 72;
+}
+
+.gallery > .figure.long {
+    grid-column: auto / span 48;
+}
+
+.gallery > .figure.landscape {
+    grid-column: auto / span 24;
+
+}
+
+.gallery > .figure.portrait {
+    grid-column: auto / span 24;
+}
+
+.gallery > .figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.crossfade-image {
+    transition: opacity 1s ease-in-out;
+}
+
+.screen {
+    position: fixed;    
+    width: 100svw;
+    height: 100svh;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.0);
+    z-index: -1;
+}
+
+body .screen.active {
+     background-color: rgba(255, 255, 255, 0.85);
+     z-index: 5;
+}
+
+.selector-label {
+    font-size: calc(0.5 * var(--text-size));
+    padding-right: 5px;
+}
+
+.selector-label>span {
+    margin-top: auto;
+}
+
+.selector {
+     padding-bottom: 0.1em;
+}
+
+.selector .selector-item {
+    transform: translateY(100%);
+    opacity: 0;
+    height: 0px;
+    margin: 0px;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, height 0.5s ease-out, color 0.5s ease-out;
+    width: fit-content;
+}
+
+.selector.open .selector-item {
+    margin-bottom: 20px;
+}
+
+.selector:not(.open) .selector-item.active {
+    display: inherit;
+    cursor: pointer;
+    transform: translateY(0px);
+    opacity: 1;
+    height: 1em;
+    /* color: #cb4b16; */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, height 0s 0.5s ease-out, color 0.5s ease-out;
+}
+
+.selector.open .selector-item {
+    display: inherit;
+    cursor: pointer;
+    transform: translateY(0px);
+    opacity: 1;
+    height: 1em;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, height 0.5s ease-out;
+}
+
+.selector .selector-item::after {
+	content: '';
+	position: absolute;
+	top: 1.05em;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+    background-color: #586E75;
+	opacity: 1;
+	transform: scale(0);
+	transform-origin: center;
+    transition: transform 0.5s ease-out;
+}
+
+.selector:not(.open) .selector-item.active::after {
+     transition: transform 0.5s ease-out, background-color 0.5s ease-out;
+}
+
+.selector:not(.open) .selector-item.active::after,
+.selector .selector-item:hover::after,
+.selector .selector-item:focus::after {
+	transform: scale(1);
+    transition: transform 0.5s ease-out;
+}
+
+.selector .selector-item::after {
+    background-color: #586E75;
+}
+
+@media (min-width: 2350px) {
+    .gallery {
+        --numCols: 96;
+    }
+    .gallery > .figure.pano {
+        grid-column: auto / span 96;
+    }    
+}
+
+@media (max-width: 1600px) {
+    .gallery {
+        --numCols: 48;
+    }
+    .gallery > .figure.pano {
+        grid-column: auto / span 48;
+    }
+}
+
+@media (max-width: 1200px) {
+    .gallery {
+        --numCols: 24;
+    }
+    .gallery > .figure.pano {
+        grid-column: auto / span 24;
+    }
+
+    .gallery > .figure.long {
+        grid-column: auto / span 24;
+    }
+
+}
+.copyright {
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.copyright p{
+    margin: 1px;
+    text-align: center;
+}
+
+.hidden {
+    /* visibility: hidden; */
+    /* display: none; */
+    /* opacity: 0; */
+    height: 0px;
+    width: 0px;
+    transition: height var(--photobox-anim) ease-out, width var(--photobox-anim) ease-out;
+}
+
+.hidden .title {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.hidden .dismiss-btn {
+    opacity: 0;
+}
+
+
+.hidden.photobox .photobox-display.loaded {
+    opacity: 0;
+    transition: opacity 0.05s ease-out;
+}

@@ -1,6 +1,7 @@
 :root {
     --foreground-text: #fdf6e3;
     --foreground-faint: #cac4b5;
+}
 
 * {
      box-sizing: border-box 
@@ -202,7 +203,7 @@ html, body {
 	width: 100%;
 	height: 0.1em;
     background-color: #586E75;
-	opacity 1;
+	opacity: 1;
 	transform: scale(0);
 	transform-origin: center;
     transition: transform 0.5s ease-out;
