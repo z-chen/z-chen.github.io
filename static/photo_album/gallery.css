@@ -36,7 +36,7 @@ html, body {
 
 .photobox {
     position: fixed;
-    height: 100svh;
+    height: 100vh;
     width: 100svw;
     /* background: #000; */
     display: flex;
@@ -103,11 +103,11 @@ html, body {
 
 .photobox .photobox-fill.loaded {
     width: 105svw;
-    height: 105svh;
+    height: 105vh;
     max-width: 105%;
     max-height: 105%;
     left: -2.55svw;
-    top: -2.5svh;
+    top: -2.5vh;
 }
 
 .photobox .title {
