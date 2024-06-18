@@ -102,11 +102,11 @@ html, body {
 }
 
 .photobox .photobox-fill.loaded {
-    width: 105svw;
+    width: 105vw;
     height: 105vh;
     max-width: 105%;
     max-height: 105%;
-    left: -2.55svw;
+    left: -2.55vw;
     top: -2.5vh;
 }
 
@@ -280,7 +280,7 @@ body .screen.active {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .gallery {
         --numCols: 24;
     }
@@ -295,6 +295,7 @@ body .screen.active {
         bottom: 10%;
     }
 }
+
 .copyright {
     margin-left: var(--margin);
     margin-right: var(--margin);
