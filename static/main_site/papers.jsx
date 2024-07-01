@@ -41,6 +41,11 @@ const Publication = React.createClass({
 })
 
 var paper_listing = [
+  {title: "Analysis of somatic mutations in whole blood from 200,618 individuals identifies pervasive positive selection and novel drivers of clonal hematopoiesis.",
+    authors: ["Bernstein, N.", "Chapman, M.S.", "Nyamondo, K.", "Chen, Z.", "Williams, N.", "Mitchell, E.", "Campbell, P.", "Cohen, R.L.", "Nangalia, J."],
+    link: "https://www.nature.com/articles/s41588-024-01755-1",
+    citation: {venue: "2024, Nature Genetics", bibtex: false}
+  },  
   {title: "Senescence rewires microenvironment sensing to facilitate antitumor immunity.",
    authors: ["Chen, H.", "Ho, Y.", "Mezzadra, R.", "Adrover, J.M.", "Smolkin, R.", "Zhu, C.", "Woess, K.",
    "Bernstein, N.", "Schmitt, G.", "Fong, L.", "Luan, W.", "Wuest, A.", "Tian, S.", "Li, X.", "Broderick, C.",
