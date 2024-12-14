@@ -4,7 +4,7 @@
   "dependencies": {
     "react": "0.14.0",
     "react-dom": "0.14.0",
-    "watchify": "3.4.0",
+    "watchify": "4.0.0",
     "babelify": "6.3.0",
     "jquery": "2.1.4",
     "underscore": "1.8.3",
