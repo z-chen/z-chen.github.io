@@ -39,8 +39,27 @@ const Publication = React.createClass({
       </div>);
   }
 })
-
 var paper_listing = [
+  {title: "Gut metagenomes reveal interactions between dietary restriction, ageing and the microbiome in genetically diverse mice.",
+    authors: ["Litichevskiy, L.", "Considine, M.", "Gill, J.", "Shandar, V.", "Cox, T.", "Descamps, H.", "Wright, K.", "Amses, K.", "Dohnalová, L.", "Liou, M.", "Tetlak, M.", "Galindo-Fiallos, M.", "Wong, A.", "Lundgren, P.", "Kim, J.", "Uhr, G.", "Rahman, R.", "Mason, S.", "Merenstein, C.", "Bushman, F.", "Raj, A.", "Harding, F.", "Chen, Z.", "Prateek, G.", "Mullis, M.", "Deighan, A.", "Robinson, L.", "Tanes, C.", "Bittinger, K.", "Chakraborty, M.", "Bhatt, A.", "Li, H.", "Barnett, I.", "Davenport, E.", "Broman, K.", "Levy, M.", "Cohen, R.", "Botstein, D.", "Freund, A.", "Di Francesco, A.", "Churchill, G.", "Li, M.", "Thaiss, C."],
+    link: "https://www.nature.com/articles/s41564-025-01963-3",
+    citation: {venue: "2025, Nature Microbiology", bibtex: false}
+  },
+  {title: "BiDAC-dependent degradation of plasma membrane proteins by the endolysosomal system.",
+    authors: ["Villa, S.", "Jafri, Q.", "Lazzari-Dean, J.", "Sangha, M.", "Olsson, N.", "Lefebvre, A.", "Fitzgerald, M.", "Jackson, K.", "Chen, Z.", "Feng, B.", "Nile, A.", "Stokoe, D.", "Bersuker, K."],
+    link: "https://www.nature.com/articles/s41467-025-59627-z",
+    citation: {venue: "2025, Nature Communications", bibtex: false}
+  },
+  {title: "Baikal: Unpaired Denoising of Fluorescence Microscopy Images using Diffusion Models.",
+    authors: ["Chaudhary, S.", "Sankarapandian, S.", "Sooknah, M.", "Pai, J.", "McCue, C.", "Chen, Z.", "Xu, J."],
+    link: "https://papers.miccai.org/miccai-2024/paper/3885_paper.pdf",
+    citation: {venue: "2024, MICCAI", bibtex: false}
+  },
+  {title: "Dietary restriction impacts health and lifespan of genetically diverse mice.",
+    authors: ["Di Francesco, A.", "Deighan, A.", "Litichevskiy, L.", "Chen, Z.", "Luciano, A.", "Robinson, L.", "Garland, G.", "Donato, H.", "Vincent, M.", "Schott, W.", "Wright, K.", "Raj, A.", "Prateek, G.", "Mullis, M.", "Hill, W.", "Zeidel, M.", "Peters, L.", "Harding, F.", "Botstein, D.", "Korstanje, R.", "Thaiss, C.", "Freund, A.", "Churchill, G."],
+    link: "https://www.nature.com/articles/s41586-024-08026-3",
+    citation: {venue: "2024, Nature", bibtex: false}
+  },
   {title: "Analysis of somatic mutations in whole blood from 200,618 individuals identifies pervasive positive selection and novel drivers of clonal hematopoiesis.",
     authors: ["Bernstein, N.", "Chapman, M.S.", "Nyamondo, K.", "Chen, Z.", "Williams, N.", "Mitchell, E.", "Campbell, P.", "Cohen, R.L.", "Nangalia, J."],
     link: "https://www.nature.com/articles/s41588-024-01755-1",
@@ -66,6 +85,11 @@ var paper_listing = [
    "Jojic, V.", "Freund, A"],
    link: "https://elifesciences.org/articles/72664.",
    citation: {venue: "2022, eLife.", bibtex: false}
+  },
+  {title: "Find your microenvironments faster with Neural Spatial LDA.",
+    authors: ["Sankarapandian, S.", "Xu, J.", "Chen, Z."],
+    link: "https://openreview.net/pdf/8b8717bb124d70db08d275f1f14219d1437ad524.pdf",
+    citation: {venue: "2022, NeurIPS Learning Meaningful Representations of Life Workshop", bibtex: false}
   },
   {title: "Modeling Multiplexed Images with Spatial-LDA Reveals Novel Tissue Microenvironments",
    authors: ["Chen, Z.", "Soifer, I.", "Hilton, H.", "Keren, L.", "Jojic, V."],

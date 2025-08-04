@@ -75,7 +75,7 @@ const App = React.createClass({
       <img src="assets/profile_sketch.png" style={{width:"140px",borderRadius:"140px",paddingBottom:"5px"}}/>
       <p className="name">Zhenghao Chen</p>
       <p>
-        <a href="https://www.linkedin.com/in/zhenghao-chen-44865036">LinkedIn</a> | <a href="assets/Zhenghao CV March 2020.pdf">Resume</a>
+        <a href="https://www.linkedin.com/in/zhenghao-chen-44865036">LinkedIn</a> | <a href="assets/Zhenghao CV August 2025.pdf">Resume</a>
       </p>
     </div>
 
