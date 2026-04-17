@@ -40,6 +40,34 @@ const Publication = React.createClass({
   }
 })
 var paper_listing = [
+  {title: "Vector2Variant: Discovery of Genetic Associations from ML Derived Representations without Phenotype Engineering",
+   authors: ["Sooknah, M.", "Srinivasan, R.", "Sankarapandian, S.", "Chen, Z.", "Xu, J."],
+   link: "https://doi.org/10.64898/2026.04.10.26350624",
+   citation: {venue: "2026, medRxiv", bibtex: false}
+  },
+  {title: "Progress and new challenges in image-based profiling",
+   authors: ["Serrano, E.", "Peters, J.", "Wagner, J.", "Graham R.E.", "Chen, Z.", "Feng, B.Y.",
+             "Miranda, G.", "Kalinin, A.A.", "Vulliard, L.", "Tomkinson, J.", "Mattson, C.", "Lippincott, M.J.",
+             "Kang, Z.", "Sitani, D.", "Bunten, D.", "Seal, S.", "Carragher, N.O.",
+             "Carpenter, A.E.", "Singh, S.", "Marin Zapata, P.A.", "Caicedo, J.C.", "Way, G.P."],
+   link: "https://pubmed.ncbi.nlm.nih.gov/41896452/",
+   citation: {venue: "2026, Mol Syst Biol", bibtex: false}
+  },
+  {
+    "title": "Extracellular matrix regulates lineage plasticity in prostate cancer through YAP/TEAD",
+    "authors": [
+      "Han, T.", "Sun, Z.", "Lange, M.", "Cho, Y.Z.", "Mcgillivray, P.", "Büttner, M.", 
+      "Kastan, N.R.", "Nandakumar, S.", "Zhao, H.", "Oak, S.", "Fong, L.", "Kang, W.", 
+      "Fan, N.", "Zhao, J.", "Salsabeel, N.", "Kaur, H.", "Mao, N.", "Chang, Q.", 
+      "Rosiek, E.", "Chan, E.", "Tipping, M.", "Schultz, N.", "Hamard, P.J.", 
+      "DeStanchina, E.", "Pe’er, D.", "Koche, R.", "Chen, Z.", "Hudspeth, A.J.", "Sawyers, C.L."
+    ],
+    "link": "https://www.biorxiv.org/content/10.64898/2025.12.30.697072v1",
+    "citation": {
+      "venue": "2025, bioRxiv",
+      "bibtex": false
+    }
+  },
   {title: "Gut metagenomes reveal interactions between dietary restriction, ageing and the microbiome in genetically diverse mice.",
     authors: ["Litichevskiy, L.", "Considine, M.", "Gill, J.", "Shandar, V.", "Cox, T.", "Descamps, H.", "Wright, K.", "Amses, K.", "Dohnalová, L.", "Liou, M.", "Tetlak, M.", "Galindo-Fiallos, M.", "Wong, A.", "Lundgren, P.", "Kim, J.", "Uhr, G.", "Rahman, R.", "Mason, S.", "Merenstein, C.", "Bushman, F.", "Raj, A.", "Harding, F.", "Chen, Z.", "Prateek, G.", "Mullis, M.", "Deighan, A.", "Robinson, L.", "Tanes, C.", "Bittinger, K.", "Chakraborty, M.", "Bhatt, A.", "Li, H.", "Barnett, I.", "Davenport, E.", "Broman, K.", "Levy, M.", "Cohen, R.", "Botstein, D.", "Freund, A.", "Di Francesco, A.", "Churchill, G.", "Li, M.", "Thaiss, C."],
     link: "https://www.nature.com/articles/s41564-025-01963-3",
